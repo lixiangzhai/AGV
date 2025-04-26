@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff18284F"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/icon_back"
+            android:drawablePadding="@dimen/dp10"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingTop="@dimen/dp15"
+            android:paddingRight="@dimen/dp20"
+            android:paddingBottom="@dimen/dp15"
+            android:text="@string/text_back"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp26"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingTop="@dimen/dp15"
+            android:paddingRight="@dimen/dp20"
+            android:paddingBottom="@dimen/dp15"
+            android:text="@string/text_network_test"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/tv_title_current_android_network"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp15"
+        android:paddingTop="@dimen/dp10"
+        android:text="@string/text_current_android_network"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_title"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tv_current_android_network"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp15"
+        android:paddingTop="@dimen/dp10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_current_android_network"
+        app:layout_constraintWidth_percent="0.5"
+        tools:text="WIFI_PUBLIC_5G" />
+
+    <TextView
+        android:id="@+id/tv_title_mac_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp15"
+        android:paddingTop="@dimen/dp10"
+        android:text="@string/text_mac_address"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_current_android_network"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tv_mac_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp15"
+        android:paddingTop="@dimen/dp10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_mac_address"
+        app:layout_constraintWidth_percent="0.5"
+        tools:text="12.12.12.12" />
+
+    <TextView
+        android:id="@+id/tv_title_network_signal_strength"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp15"
+        android:paddingTop="@dimen/dp10"
+        android:text="@string/text_signal_strength"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_mac_address"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tv_network_signal_strength"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp15"
+        android:paddingTop="@dimen/dp10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_network_signal_strength"
+        app:layout_constraintWidth_percent="0.5"
+        tools:text="RSSI: -50" />
+
+
+    <Button
+        android:id="@+id/btn_start_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp15"
+        android:layout_marginVertical="@dimen/dp10"
+        android:background="@drawable/bg_common_button_active"
+        android:paddingHorizontal="@dimen/dp35"
+        android:text="@string/text_start_test"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_network_signal_strength"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <Button
+        android:id="@+id/btn_stop_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp15"
+        android:layout_marginVertical="@dimen/dp10"
+        android:background="@drawable/bg_common_button_inactive"
+        android:paddingHorizontal="@dimen/dp35"
+        android:text="@string/text_stop_test"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_start_test"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_test_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_title_current_android_network"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_title">
+
+        <TextView
+            android:id="@+id/tv_send_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dp10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.4"
+            tools:text="发送次数: 1" />
+
+        <TextView
+            android:id="@+id/tv_receive_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dp10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintStart_toEndOf="@+id/tv_send_count"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.4"
+            tools:text="接收次数: 1" />
+
+        <TextView
+            android:id="@+id/tv_clean_counts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_receive_count"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.2"
+            tools:text="@string/text_clear" />
+
+        <TextView
+            android:id="@+id/tv_logs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="vertical"
+            android:background="#EEE"
+            android:textSize="@dimen/sp14"
+            android:textColor="#777"
+            tools:text="2024/12/20 11:08:15:123 send\n2024/12/20 11:08:15:323 receive"
+            android:paddingHorizontal="@dimen/dp10"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_clean_logs"
+            app:layout_constraintTop_toBottomOf="@id/tv_send_count" />
+
+        <TextView
+            android:id="@+id/tv_clean_logs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_clear"
+            android:textColor="@color/white"
+            android:paddingVertical="@dimen/dp10"
+            android:paddingHorizontal="@dimen/dp30"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
